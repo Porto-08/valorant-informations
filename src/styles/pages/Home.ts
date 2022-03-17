@@ -1,23 +1,19 @@
 import styled from 'styled-components'
+import background from '../../assets/main-background.jpg'
 
-export const Container = styled.div`
+export const Container = styled.main`
   width: 100vw;
   height: 100vh;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  background: url(${background}) no-repeat center center fixed;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
 
-  h1 {
-    font-size: 54px;
-    color: ${props => props.theme.colors.primary};
-    margin-top: 40px;
-  }
-
-  p {
-    margin-top: 24px;
-    font-size: 24px;
-    line-height: 32px;
-  }
 `
+
+export const Introduction = styled.section`
+  display: flex;
+
+
+`
+

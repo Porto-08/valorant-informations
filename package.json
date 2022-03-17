@@ -1,5 +1,5 @@
 {
-  "name": "reactsetup",
+  "name": "valorant-information",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,7 @@
     "next-images": "^1.4.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
+    "react-icons": "^4.3.1",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {
