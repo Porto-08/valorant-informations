@@ -18,7 +18,7 @@ export const Introduction = styled.section`
 
 export const BackgroundImage = styled.div`
   width: 100%;
-  height: 70vh;
+  height: 90vh;
 
   display: flex;
   flex-direction: column;
@@ -43,24 +43,65 @@ export const BackgroundImage = styled.div`
     color: ${props => props.theme.colors.text};
     max-width: 60%;
   }
+`;
 
-  button {
-    border: none;
+export const GridAbout = styled.section`
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 50px 50px 50px;
+
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 400px));
+  gap: 2.5rem;
+  width: 100%;
+
+  background: ${props => props.theme.colors.text};
+`;
 
 
-    font-size: clamp(1.25rem, 1.5vw, 1.5rem);
-    color: ${props => props.theme.colors.text};
-    background: ${props => props.theme.colors.primary};
 
-    padding: 20px 30px;
-    
-    cursor: pointer;
 
-    &:hover {
-      background: ${props => props.theme.colors.background};
-      color: ${props => props.theme.colors.primary};
-    }
+
+export const Agents = styled.section`
+  display: flex;
+  width: 100%;
+`;
+
+
+export const AgentText = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+
+
+  flex: 1;
+  padding: 30px;
+  background: ${props => props.theme.colors.tertiary};
+  
+  h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: ${props => props.theme.colors.primary};
   }
 
+  p {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: ${props => props.theme.colors.text};
+    letter-spacing: 1px;
+    
+  }
+
+`;
+
+export const AgentImage = styled.div`
+  flex: .8;
+  background: url("https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/background.png") no-repeat center center;
+  background-color: ${props => props.theme.colors.primary};
+
+  img {
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+  }
 
 `;
