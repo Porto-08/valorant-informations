@@ -5,7 +5,9 @@ export const Container = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  width: 100%;
+  background: ${props => props.theme.colors.background};
+
+  width: 100vw;
   padding: 30px;
 
 `;
