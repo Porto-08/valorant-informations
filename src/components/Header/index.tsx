@@ -2,8 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 import { Container, Hamburger, NavBar } from './styles';
 import { GiChaingun } from 'react-icons/gi';
+import {VscChromeClose } from 'react-icons/vsc';
 
-const Header: React.FC = () => {
+interface Props {
+  openMenu: () => void;
+  isOpen: boolean;
+}
+
+const Header = ({ openMenu, isOpen }: Props) => {
   return (
     <Container>
       <img src="#" alt="Valorant" />
@@ -12,12 +18,10 @@ const Header: React.FC = () => {
         <Link href="/">Home</Link>
         <Link href="/">Agents</Link>
         <Link href="/">Game Modes</Link>
-        <Link href="/">Maps</Link>
-        <Link href="/">About</Link>
       </NavBar>
 
-      <Hamburger type='button'>
-        <GiChaingun />
+      <Hamburger type='button' onClick={openMenu}>
+        {isOpen ? <VscChromeClose size={20}/> : <GiChaingun size={20}/>}
       </Hamburger>
     </Container>
   );

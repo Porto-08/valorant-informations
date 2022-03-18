@@ -7,6 +7,10 @@ export const Container = styled.main`
   background-size: cover;
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
 
+  @media (max-width: 768px) {
+    height: 100vh;
+  }
+
 `
 
 export const Introduction = styled.section`
@@ -18,7 +22,7 @@ export const Introduction = styled.section`
 
 export const BackgroundImage = styled.div`
   width: 100%;
-  height: 90vh;
+  height: 87vh;
 
   display: flex;
   flex-direction: column;
@@ -41,26 +45,60 @@ export const BackgroundImage = styled.div`
   p {
     font-size: clamp(1rem, 1.5vw, 1.25rem);
     color: ${props => props.theme.colors.text};
-    max-width: 60%;
+  }
+
+  @media (max-width: 768px) {
+    text-align: center;
   }
 `;
 
 export const GridAbout = styled.section`
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 50px 50px 50px;
+    display: grid;
+    gap: 20px;
 
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 400px));
-  gap: 2.5rem;
-  width: 100%;
+    padding: 30px;
+    background: ${props => props.theme.colors.text};
 
-  background: ${props => props.theme.colors.text};
+    h2 {
+      text-align: center;
+      font-size: clamp(2rem, 3vw, 3rem);
+      color: ${props => props.theme.colors.background};
+
+      &::before {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 5px;
+        background: ${props => props.theme.colors.primary};
+        margin: 0 auto;
+      }
+    }
+
+    p {
+      text-align: center;
+      font-size: clamp(.8rem, 1vw, 1rem);
+      color: ${props => props.theme.colors.background};
+    }
+
+    .grid {
+      display: grid;
+      align-items: center;
+      justify-content: space-evenly;
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 500px));
+      gap: 2.5rem;
+      
+
+      @media (max-width: 1366px) {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 300px));
+        gap: 1rem;
+      }
+
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
 `;
-
-
-
-
 
 export const Agents = styled.section`
   display: flex;
@@ -103,5 +141,22 @@ export const AgentImage = styled.div`
     height: 600px;
     object-fit: contain;
   }
+`;
+
+export const GameModes = styled.section`
+  display: flex;
+  width: 100%;
+
+`;
+
+export const GameModesText = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3rem;
+
+  flex: 1;
+  padding: 30px;
+  background: ${props => props.theme.colors.tertiary};
 
 `;

@@ -8,6 +8,15 @@ export default createGlobalStyle`
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 0;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: ${props => props.theme.colors.primary};
+    }
   }
 
   body {
@@ -17,5 +26,9 @@ export default createGlobalStyle`
     background: ${props => props.theme.colors.background};
     color: ${props => props.theme.colors.text};
     font: 400 16px "Poppins", sans-serif;
+
+  
   }
+
+  
 `

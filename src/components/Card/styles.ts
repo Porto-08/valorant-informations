@@ -24,9 +24,10 @@ export const Container = styled.div`
     }
 
     p {
-      font-size: clamp(1rem, 1.5vw, 1rem);
+      font-size: clamp(.8rem, 1.5vw, 1rem);
       color: ${props => props.theme.colors.tertiary};
       letter-spacing: .5px;
+      text-align: left;
     }
 
 `;

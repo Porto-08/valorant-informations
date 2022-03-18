@@ -10,6 +10,11 @@ export const Container = styled.header`
   width: 100vw;
   padding: 30px;
 
+  position: fixed;
+  top: 0;
+
+  z-index: 3;
+
 `;
 
 export const NavBar = styled.nav`
@@ -50,8 +55,7 @@ export const Hamburger = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  
   color: ${props => props.theme.colors.text};
 
   &:hover {
