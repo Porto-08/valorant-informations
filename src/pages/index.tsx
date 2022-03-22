@@ -15,7 +15,6 @@ const Home: React.FC = () => {
       </Head>
 
       <Introduction>
-
         <BackgroundImage>
           <p>
             Todas as informações em um só lugar.

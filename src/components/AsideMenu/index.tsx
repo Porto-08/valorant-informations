@@ -4,7 +4,7 @@ import { Container } from './styles'
 
 const AsideMenu = () => {
   return (
-    <Container>
+    <Container role='aside'>
         <Link href="/">Agents</Link>
         <Link href="/">Buddies</Link>
         <Link href="/">Bundles</Link>
