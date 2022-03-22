@@ -9,6 +9,7 @@ import Header from '../components/Header'
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <ThemeProvider theme={theme}>
+      <Header />
       <Component {...pageProps} />
       <GlobalStyle />
     </ThemeProvider>

@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Head from 'next/head'
 import { AgentImage, Agents, AgentText, BackgroundImage, Container, GameModes, GameModesText, GridAbout, Introduction } from '../styles/pages/Home'
 import Header from 'src/components/Header'
 import Background from "../assets/images/main-background.jpg"
-import Image from 'next/image'
 import Button from 'src/components/Button'
 import Card from 'src/components/Card'
 import Footer from 'src/components/Footer'
@@ -22,10 +21,6 @@ const Home: React.FC = () => {
         <title>Valorant Informations</title>
       </Head>
 
-      <Header openMenu={openMenu} isOpen={isOpen}/>
-
-      {isOpen && <AsideMenu />}
-    
       <Introduction>
 
         <BackgroundImage>
@@ -81,4 +76,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home
+export default Home;

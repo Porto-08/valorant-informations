@@ -3,13 +3,14 @@ import Link from 'next/link';
 import { Container, Hamburger, NavBar } from './styles';
 import { GiChaingun } from 'react-icons/gi';
 import {VscChromeClose } from 'react-icons/vsc';
+import AsideMenu from '../AsideMenu';
+import { useState } from 'react';
 
-interface Props {
-  openMenu: () => void;
-  isOpen: boolean;
-}
 
-const Header = ({ openMenu, isOpen }: Props) => {
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+
   return (
     <Container>
       <img src="#" alt="Valorant" />
@@ -20,9 +21,11 @@ const Header = ({ openMenu, isOpen }: Props) => {
         <Link href="/">Game Modes</Link>
       </NavBar>
 
-      <Hamburger type='button' onClick={openMenu}>
+      <Hamburger type='button' onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <VscChromeClose size={20}/> : <GiChaingun size={20}/>}
       </Hamburger>
+
+      {isOpen && <AsideMenu />}
     </Container>
   );
 };
