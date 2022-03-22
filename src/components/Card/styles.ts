@@ -4,11 +4,14 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-evenly;
     gap: 10px;
 
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
     border-radius: 30px;
     padding: 1rem 1.5rem;
+
+    min-height: 450px;
 
 
     img {

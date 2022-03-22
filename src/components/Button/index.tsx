@@ -8,11 +8,12 @@ interface Props {
     children: React.ReactNode
     fontSize?: string
     padding?: string
+    onClick?: () => void
 }
 
-const Button = ({ children, title, background, hoverBackground, fontSize, padding}: Props) => {
+const Button = ({ children, title, background, hoverBackground, fontSize, padding, onClick}: Props) => {
     return (
-        <Container title={title} background={background} hoverBackground={hoverBackground} fontSize={fontSize} padding={padding}>
+        <Container title={title} background={background} hoverBackground={hoverBackground} fontSize={fontSize} padding={padding} onClick={onClick}>
             {children}
         </Container>
     )

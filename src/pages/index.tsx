@@ -1,19 +1,12 @@
 import React, { useState } from 'react';
 import Head from 'next/head'
-import { AgentImage, Agents, AgentText, BackgroundImage, Container, GameModes, GameModesText, GridAbout, Introduction } from '../styles/pages/Home'
-import Header from 'src/components/Header'
-import Background from "../assets/images/main-background.jpg"
+import { BackgroundImage, Container, GridAbout, Introduction } from '../styles/pages/Home'
 import Button from 'src/components/Button'
 import Card from 'src/components/Card'
-import Footer from 'src/components/Footer'
-import AsideMenu from 'src/components/AsideMenu'
+import { useRouter } from 'next/router';
 
 const Home: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  const openMenu = () => {
-    setIsOpen(!isOpen)
-  }
+  const router = useRouter();
 
   return (
     <Container>
@@ -32,14 +25,16 @@ const Home: React.FC = () => {
             Valorant Informations
           </h1>
 
-          <Button title='Learn more'>
-            Conheça o Jogo.
+          <Button title='Learn more' onClick={() => {
+            router.push('#conheca-o-jogo')
+          }}>
+            Conheça o Jogo
           </Button>
         </BackgroundImage>
       </Introduction>
 
 
-      <GridAbout>
+      <GridAbout id='conheca-o-jogo'>
         <div>
           <h2>Conheça o Jogo</h2>
           <p>Para mais informações acesse o menu a direita.</p>
@@ -50,28 +45,25 @@ const Home: React.FC = () => {
           <Card
             image='https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/splash.png'
             title='Maps'
-            description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur facere iste sequi totam nostrum enim optio in exercitationem ipsum! Iure distinctio consequatur quia esse sint odio dignissimos explicabo commodi porro.'
+            description='Six maps to play with your friends. Each map has a unique style and a unique story.'
             buttonTitle='See maps'
           />
 
           <Card
             image='https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/splash.png'
             title='Agents'
-            description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur facere iste sequi totam nostrum enim optio in exercitationem ipsum! Iure distinctio consequatur quia esse sint odio dignissimos explicabo commodi porro.'
-            buttonTitle='See agents'
+            description='Find more ways to plant the Spike and style on your enemies with scrappers, strategists, and hunters of every description. '
+            buttonTitle='Check the HeadCount'
           />
 
           <Card
             image='https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/splash.png'
-            title='Game Modes'
-            description='Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur facere iste sequi totam nostrum enim optio in exercitationem ipsum! Iure distinctio consequatur quia esse sint odio dignissimos explicabo commodi porro.'
+            title='Arsenal'
+            description='Choose yout weapon, customize it, and equip it to your team. We have Sidearms, Pistols, Shotguns, SMGS, Spiners, Heavies, Melee and Rifles for you to choose from.'
             buttonTitle='See game modes'
           />
         </div>
-
       </GridAbout>
-
-      <Footer />
     </Container>
   )
 }

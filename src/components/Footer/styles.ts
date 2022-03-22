@@ -10,12 +10,13 @@ export const Container = styled.footer`
     background-color: ${props => props.theme.colors.background};
     padding: 20px;
 
+
     a {
         color: ${props => props.theme.colors.primary};
         text-decoration: none;
 
         &:hover {
-            color: ${props => props.theme.colors.secondary};
+            color: ${props => props.theme.colors.text};
             text-decoration: underline;
         }
     }

@@ -2,15 +2,8 @@ import styled from 'styled-components';
 
 export const Container = styled.main`
   width: 100vw;
-  height: 100vh;
-
   background-size: cover;
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
-
-  @media (max-width: 768px) {
-    height: 100vh;
-  }
-
 `
 
 export const Introduction = styled.section`
@@ -55,7 +48,6 @@ export const BackgroundImage = styled.div`
 export const GridAbout = styled.section`
     display: grid;
     gap: 20px;
-
     padding: 30px;
     background: ${props => props.theme.colors.text};
 
@@ -100,63 +92,4 @@ export const GridAbout = styled.section`
 
 `;
 
-export const Agents = styled.section`
-  display: flex;
-  width: 100%;
-`;
 
-
-export const AgentText = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 3rem;
-
-
-  flex: 1;
-  padding: 30px;
-  background: ${props => props.theme.colors.tertiary};
-  
-  h2 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    color: ${props => props.theme.colors.primary};
-  }
-
-  p {
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-    color: ${props => props.theme.colors.text};
-    letter-spacing: 1px;
-    
-  }
-
-`;
-
-export const AgentImage = styled.div`
-  flex: .8;
-  background: url("https://media.valorant-api.com/agents/601dbbe7-43ce-be57-2a40-4abd24953621/background.png") no-repeat center center;
-  background-color: ${props => props.theme.colors.primary};
-
-  img {
-    width: 100%;
-    height: 600px;
-    object-fit: contain;
-  }
-`;
-
-export const GameModes = styled.section`
-  display: flex;
-  width: 100%;
-
-`;
-
-export const GameModesText = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 3rem;
-
-  flex: 1;
-  padding: 30px;
-  background: ${props => props.theme.colors.tertiary};
-
-`;
