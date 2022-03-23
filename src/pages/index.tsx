@@ -24,9 +24,12 @@ const Home: React.FC = () => {
             Valorant Informations
           </h1>
 
-          <Button title='Learn more' onClick={() => {
-            router.push('#conheca-o-jogo')
-          }}>
+          <Button 
+            title='Learn more' 
+            onClick={() => {
+              router.push('#conheca-o-jogo')
+            }}
+          >
             Conheça o Jogo
           </Button>
         </BackgroundImage>

@@ -17,8 +17,8 @@ const Header = () => {
 
       <NavBar>
         <Link href="/">Home</Link>
-        <Link href="/">Agents</Link>
-        <Link href="/">Game Modes</Link>
+        <Link href="/agents">Agents</Link>
+        <Link href="/game-modes">Game Modes</Link>
       </NavBar>
 
       <Hamburger type='button' onClick={() => setIsOpen(!isOpen)}>

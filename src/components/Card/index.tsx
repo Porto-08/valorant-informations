@@ -1,23 +1,17 @@
 import React from 'react'
 import Button from '../Button'
+import { Props } from './interface'
 import { Container } from './styles'
-
-interface Props {
-    title: string
-    description: string
-    image: string
-    buttonTitle: string
-}
 
 
 const Card = ({ title, description, image, buttonTitle }: Props) => {
     return (
         <Container>
-            <img src={image} alt="" />
+            <img src={image} alt="Card Image" />
 
             <h3>{title}</h3>
 
-            <p>
+            <p role='paragraph'>
                 {description}
             </p>
 

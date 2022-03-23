@@ -11,7 +11,6 @@ interface ContainerProps {
 export const Container = styled.button<ContainerProps>`
     border: none;
 
-
     font-size: ${props => props.fontSize || 'clamp(1rem, 1.5vw, 1.5rem)'};
     color: ${props => props.theme.colors.text};
     background: ${props => props.background || props.theme.colors.primary};
