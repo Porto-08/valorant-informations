@@ -12,11 +12,11 @@ const mock: Props = {
 
 
 describe("Card", () => {
-    it('should be render Card', () => {
+    it('should be render Card', async () => {
         renderTheme(<Card {...mock} />)
-
-        expect(screen.getByRole('img')).toBeInTheDocument()
-        expect(screen.getByRole('img')).toHaveAttribute('src', mock.image)
+        
+        const image = screen.getByAltText("Card Image")
+        expect(image).toHaveAttribute('src', mock.image)
 
         expect(screen.getByRole('heading')).toBeInTheDocument()
         expect(screen.getByRole('heading')).toHaveTextContent(mock.title)

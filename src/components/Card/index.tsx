@@ -1,13 +1,25 @@
-import React from 'react'
+import { Skeleton } from '@mui/material'
+import React, { useState } from 'react'
 import Button from '../Button'
 import { Props } from './interface'
 import { Container } from './styles'
 
 
 const Card = ({ title, description, image, buttonTitle }: Props) => {
+    const [skeleton, setSkeleton] = useState<boolean>(true);
+
+
     return (
         <Container>
-            <img src={image} alt="Card Image" />
+            {skeleton
+                ?
+                <Skeleton variant='rectangular' animation='wave'>
+                    <img onLoad={() => setSkeleton(false)} src={image} alt="Card Image" />
+                </Skeleton>
+                : (
+                    <img src={image} alt="Card Image" />
+                )
+            }
 
             <h3>{title}</h3>
 
