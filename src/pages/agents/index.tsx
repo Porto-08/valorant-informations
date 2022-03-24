@@ -1,9 +1,10 @@
 import { GetStaticProps } from 'next';
 import React from 'react';
-import Card from 'src/components/Card';
-import { Container, GridAgents } from './styles';
+import Card from '../../components/Card';
+import { Container, GridAgents } from '../../styles/pages/Agent';
 import { api } from '../../service/api';
-import { Agent } from './interface';
+import { Agent } from '../../interfaces/agents/interface';
+import Intro from '../../components/Intro';
 
 interface Props {
   agents: {
@@ -13,13 +14,9 @@ interface Props {
 }
 
 const Agents = ({ agents }: Props) => {
-  console.log(agents);
   return (
     <Container>
-      <div>
-        <h1>Agents</h1>
-        <span>Look all the agents, choose the one most combine with you!</span>
-      </div>
+      <Intro title='Agents' subtitle='Look all the agents, choose the one most combine with you!'/>
 
       <GridAgents>
         {agents && agents.data.map((agent) => (
@@ -42,4 +39,4 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default Agents
+export default Agents;

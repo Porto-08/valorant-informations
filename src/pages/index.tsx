@@ -4,6 +4,7 @@ import { BackgroundImage, Container, GridAbout, Introduction } from '../styles/p
 import Button from 'src/components/Button'
 import Card from 'src/components/Card'
 import { useRouter } from 'next/router';
+import Intro from 'src/components/Intro';
 
 const Home: React.FC = () => {
   const router = useRouter();
@@ -37,10 +38,8 @@ const Home: React.FC = () => {
 
 
       <GridAbout id='conheca-o-jogo'>
-        <div>
-          <h2>Conheça o Jogo</h2>
-          <p>Para mais informações acesse o menu a direita.</p>
-        </div>
+        <Intro title='Conheça o Jogo.' subtitle='Para mais informações acesse o menu a direita.'/>
+
 
 
         <div className='grid'>
