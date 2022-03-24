@@ -1,6 +1,7 @@
 export interface Props {
     title: string
-    description: string
+    description?: string
     image: string
-    buttonTitle: string
+    buttonTitle?: string
+    onClick?: () => void
 }

@@ -5,6 +5,7 @@ import { Container, GridAgents } from '../../styles/pages/Agent';
 import { api } from '../../service/api';
 import { Agent } from '../../interfaces/agents/interface';
 import Intro from '../../components/Intro';
+import { useRouter } from 'next/router';
 
 interface Props {
   agents: {
@@ -14,14 +15,19 @@ interface Props {
 }
 
 const Agents = ({ agents }: Props) => {
+  const router = useRouter();
+
+
   return (
     <Container>
-      <Intro title='Agents' subtitle='Look all the agents, choose the one most combine with you!'/>
+      <Intro title='Agents' subtitle='Choose what suits you best'/>
 
       <GridAgents>
         {agents && agents.data.map((agent) => (
           agent.isPlayableCharacter && (
-            <Card key={agent.uuid} buttonTitle='Choose this' description={agent.description} image={agent.fullPortraitV2} title={agent.displayName} />
+            <Card key={agent.uuid} buttonTitle='Choose this' description={agent.description} image={agent.fullPortraitV2} title={agent.displayName} onClick={() => {
+              router.push(`/agents/${agent.uuid}`)
+            }}/>
           )
         ))}
       </GridAgents>

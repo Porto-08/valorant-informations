@@ -48,6 +48,9 @@ const Home: React.FC = () => {
             title='Maps'
             description='Six maps to play with your friends. Each map has a unique style and a unique story.'
             buttonTitle='See maps'
+            onClick={() => {
+              router.push('/maps')
+            }}
           />
 
           <Card
@@ -55,6 +58,9 @@ const Home: React.FC = () => {
             title='Agents'
             description='Find more ways to plant the Spike and style on your enemies with scrappers, strategists, and hunters of every description. '
             buttonTitle='Check the HeadCount'
+            onClick={() => {
+              router.push('/agents')
+            }}
           />
 
           <Card
@@ -62,6 +68,9 @@ const Home: React.FC = () => {
             title='Arsenal'
             description='Choose yout weapon, customize it, and equip it to your team. We have Sidearms, Pistols, Shotguns, SMGS, Spiners, Heavies, Melee and Rifles for you to choose from.'
             buttonTitle='See game modes'
+            onClick={() => {
+              router.push('/arsenal')
+            }}
           />
         </div>
       </GridAbout>

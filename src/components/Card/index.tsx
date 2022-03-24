@@ -5,7 +5,7 @@ import { Props } from './interface'
 import { Container } from './styles'
 
 
-const Card = ({ title, description, image, buttonTitle }: Props) => {
+const Card = ({ title, description, image, buttonTitle, onClick }: Props) => {
     const [skeleton, setSkeleton] = useState<boolean>(true);
 
 
@@ -27,9 +27,11 @@ const Card = ({ title, description, image, buttonTitle }: Props) => {
                 {description}
             </p>
 
-            <Button title='Learn more' padding='10px' fontSize='clamp(1rem, 1vw, 1.25rem)'>
+            {buttonTitle && (
+            <Button title='Learn more' padding='10px' fontSize='clamp(1rem, 1vw, 1.25rem)' onClick={onClick}>
                 {buttonTitle}
             </Button>
+            )}
         </Container>
     )
 }

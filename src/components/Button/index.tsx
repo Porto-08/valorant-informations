@@ -11,7 +11,7 @@ interface Props {
     onClick?: () => void
 }
 
-const Button = ({ children, title, background, hoverBackground, fontSize, padding, onClick}: Props) => {
+const Button = ({ children, title, background, hoverBackground, fontSize, padding, onClick }: Props) => {
     return (
         <Container title={title} background={background} hoverBackground={hoverBackground} fontSize={fontSize} padding={padding} onClick={onClick}>
             {children}
