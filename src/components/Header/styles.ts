@@ -1,3 +1,4 @@
+import { fadeIn } from './../../styles/animations';
 import styled from 'styled-components';
 
 export const Container = styled.header`
@@ -15,6 +16,7 @@ export const Container = styled.header`
 
   z-index: 3;
 
+  animation: ${fadeIn} .6s ease;
 `;
 
 export const NavBar = styled.nav`

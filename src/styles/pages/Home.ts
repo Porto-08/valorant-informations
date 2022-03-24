@@ -1,9 +1,13 @@
 import styled from 'styled-components';
+import { fadeIn } from '../animations';
 
 export const Container = styled.main`
   width: 100vw;
   background-size: cover;
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+
+  
+  animation: ${fadeIn} .7s ease;
 `
 
 export const Introduction = styled.section`
@@ -28,16 +32,22 @@ export const BackgroundImage = styled.div`
   box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
 
   
+  p {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: ${props => props.theme.colors.text};
+    animation: ${fadeIn} .7s ease both .3s;
+  }
+  
   h1 {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     color: ${props => props.theme.colors.text};
     text-transform: uppercase;
     letter-spacing: 1.5px;
+    animation: ${fadeIn} .7s ease both .5s;
   }
 
-  p {
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
-    color: ${props => props.theme.colors.text};
+  button {
+    animation: ${fadeIn} .7s ease both .7s;
   }
 
   @media (max-width: 768px) {

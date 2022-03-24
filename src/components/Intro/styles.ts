@@ -1,10 +1,10 @@
+import { fadeIn } from './../../styles/animations';
 import styled from "styled-components";
 
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-
 `
 
 export const Title = styled.h1`
@@ -13,6 +13,9 @@ export const Title = styled.h1`
     font-style: italic;
     color: ${props => props.theme.colors.tertiary};
     text-align: center;
+
+    
+    animation: ${fadeIn} .7s ease;
 
     &:before {
       content: "";
@@ -29,4 +32,7 @@ export const Subtitle = styled.span`
     font-size: clamp(1rem, 1.15vw, 1.25rem);
     font-style: italic;
     color: ${props => props.theme.colors.tertiary};
+
+    
+    animation: ${fadeIn} .7s ease both .3s;
 `;

@@ -1,3 +1,4 @@
+import { fadeIn } from './../animations';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -8,6 +9,8 @@ export const Container = styled.div`
     padding: 20px;
 
     background: ${props => props.theme.colors.text};
+
+    animation: ${fadeIn} .7s ease;
 
     h1 {
         font-size: clamp(1.5rem, 2.5vw, 3rem);

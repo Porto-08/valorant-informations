@@ -1,3 +1,4 @@
+import { fadeIn } from './../../styles/animations';
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -14,6 +15,7 @@ export const Container = styled.div`
     min-height: 450px;
     background-color: ${props => props.theme.colors.text};
 
+    animation: ${fadeIn} .7s ease both .7s;
 
     img {
       width: 100%;

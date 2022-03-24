@@ -1,3 +1,4 @@
+import { fadeIn } from './animations';
 import { createGlobalStyle } from 'styled-components'
 
 export default createGlobalStyle`

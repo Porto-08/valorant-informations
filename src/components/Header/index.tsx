@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { Container, Hamburger, NavBar } from './styles';
 import { GiChaingun } from 'react-icons/gi';
@@ -9,7 +9,12 @@ import { useState } from 'react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const path = typeof window !== 'undefined' ? window.location.pathname : '';
 
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [path]);
 
   return (
     <Container>
