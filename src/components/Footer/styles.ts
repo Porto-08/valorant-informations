@@ -10,6 +10,9 @@ export const Container = styled.footer`
     background-color: ${props => props.theme.colors.background};
     padding: 20px;
 
+    p {
+        font-size: clamp(.8rem, 1.15vw, 1.25rem);
+    }
 
     a {
         color: ${props => props.theme.colors.primary};

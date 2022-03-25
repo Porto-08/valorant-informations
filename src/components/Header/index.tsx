@@ -5,12 +5,13 @@ import { GiChaingun } from 'react-icons/gi';
 import {VscChromeClose } from 'react-icons/vsc';
 import AsideMenu from '../AsideMenu';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const path = typeof window !== 'undefined' ? window.location.pathname : '';
-
+  const router = useRouter();
 
   useEffect(() => {
     setIsOpen(false);
@@ -18,7 +19,9 @@ const Header = () => {
 
   return (
     <Container>
-      <img src="#" alt="Valorant" />
+      <img src='/images/Valorant.svg' alt="Valorant" onClick={() => {
+        router.push('/');
+      }} />
 
       <NavBar>
         <Link href="/">Home</Link>

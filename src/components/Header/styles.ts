@@ -9,7 +9,7 @@ export const Container = styled.header`
   background: ${props => props.theme.colors.background};
 
   width: 100vw;
-  padding: 30px;
+  padding: 30px 20px;
 
   position: sticky;
   top: 0;
@@ -17,6 +17,23 @@ export const Container = styled.header`
   z-index: 3;
 
   animation: ${fadeIn} .6s ease;
+
+  img {
+    height: 100%;
+    max-height: 60px;
+    max-width: 100%;
+    object-fit: cover;
+
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+      max-height: 40px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 10px;
+  }
 `;
 
 export const NavBar = styled.nav`
