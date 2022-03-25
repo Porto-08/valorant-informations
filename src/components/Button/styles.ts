@@ -16,7 +16,7 @@ export const Container = styled.button<ContainerProps>`
     background: ${props => props.background || props.theme.colors.primary};
 
     padding: ${props => props.padding || '20px 30px'};
-
+    border-radius: 10px;
     cursor: pointer;
 
     &:hover {

@@ -17,13 +17,6 @@ export const Container = styled.div`
 
     animation: ${fadeIn} .7s ease both .7s;
 
-    img {
-      width: 100%;
-      height: 250px;
-      border-radius: 10px;
-      object-fit: cover;
-    }
-
     h3 {
       font-size: clamp(1.5rem, 2vw, 1.25rem);
       color: ${props => props.theme.colors.tertiary};

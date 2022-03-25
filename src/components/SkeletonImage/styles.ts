@@ -9,6 +9,7 @@ export const ImageSkeleon = styled.img`
     max-width: 100%;
     grid-area: 1/1;
     opacity: 1;
+    border-radius: 10px;
 
     transition: opacity .4s ease;
 `

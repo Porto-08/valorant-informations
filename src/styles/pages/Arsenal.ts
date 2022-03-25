@@ -17,4 +17,8 @@ export const GridArsenal = styled.div`
     display: grid;
     grid-template-columns: repeat(4, minmax(300px, 1fr));
     gap: 20px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+    }
 `;

@@ -13,9 +13,7 @@ const Card = ({ title, description, image, buttonTitle, onClick }: Props) => {
 
             <h3>{title}</h3>
 
-            <p role='paragraph'>
-                {description}
-            </p>
+            {description && <p>{description}</p>}
 
             {buttonTitle && (
             <Button title='Learn more' padding='10px' fontSize='clamp(1rem, 1vw, 1.25rem)' onClick={onClick}>
