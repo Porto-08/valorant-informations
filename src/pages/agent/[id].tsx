@@ -21,12 +21,12 @@ const Agent = ({ agent }: Props) => {
         <Container>
             <HeaderAgent>
                 <div>
-                    <h1>{agent.displayName}</h1>
+                    <h1>{agent.displayName ? agent.displayName : "Agent Name"}</h1>
                     <p>{agent.role.displayName}</p>
                 </div>
 
 
-                <img src={agent.fullPortraitV2} alt={agent.displayName} />
+                <img src={agent.fullPortraitV2} alt={agent.displayName ? agent.displayName : "Agent Name"} />
             </HeaderAgent>
 
             <DescriptionAgent>
@@ -68,11 +68,15 @@ const Agent = ({ agent }: Props) => {
 export const getStaticPaths: GetStaticPaths = async () => {
     const { data } = await api.get<IAgents>('/agents');
 
-    const paths = data.data.map((agent) => ({
-        params: {
-            id: agent.uuid
-        }
-    }))
+    const agents = data.data.filter(agent => agent.isPlayableCharacter);
+
+    const paths = agents.map((agent) => {
+        return {
+            params: { 
+                id: agent.uuid  
+            }
+        };
+    });
 
     return {
         paths,

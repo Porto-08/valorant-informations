@@ -104,6 +104,7 @@ export const SkillsAgent = styled.section`
     padding: 20px;
     
     display: flex;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     gap: 20px;
@@ -138,6 +139,7 @@ export const Skills = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
+    align-items: flex-start;
     gap: 20px;
 
     @media(max-width: 768px) {
