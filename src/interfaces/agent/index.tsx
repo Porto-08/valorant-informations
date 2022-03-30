@@ -1,5 +1,4 @@
 
-
 export interface Role {
     uuid: string;
     displayName: string;
@@ -32,7 +31,7 @@ export interface Data {
     displayName: string;
     description: string;
     developerName: string;
-    characterTags?: any;
+    characterTags: string[];
     displayIcon: string;
     displayIconSmall: string;
     bustPortrait: string;
@@ -50,9 +49,9 @@ export interface Data {
     voiceLine: VoiceLine;
 }
 
-export interface IAgents {
+export interface IAgent {
     status: number;
-    data: Data[];
+    data: Data;
 }
 
 

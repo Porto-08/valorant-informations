@@ -1,16 +1,16 @@
 import { GetStaticProps } from 'next';
 import React from 'react';
 import Card from '../../components/Card';
-import { Container, GridAgents } from '../../styles/pages/Agent';
+import { Container, GridAgents } from '../../styles/pages/Agents';
 import { api } from '../../service/api';
-import { Agent } from '../../interfaces/agents/interface';
+import { IAgents, Data } from '../../interfaces/agents/interface';
 import Intro from '../../components/Intro';
 import { useRouter } from 'next/router';
 
 interface Props {
   agents: {
     status: number;
-    data: Agent[];
+    data: Data[];
   }
 }
 
@@ -26,7 +26,7 @@ const Agents = ({ agents }: Props) => {
         {agents && agents.data.map((agent) => (
           agent.isPlayableCharacter && (
             <Card key={agent.uuid} buttonTitle='Choose this' description={agent.description} image={agent.fullPortraitV2} title={agent.displayName} onClick={() => {
-              router.push(`/agents/${agent.uuid}`)
+              router.push(`/agent/${agent.uuid}`)
             }}/>
           )
         ))}
@@ -36,7 +36,7 @@ const Agents = ({ agents }: Props) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await api.get<Agent[]>('agents');
+  const { data } = await api.get<IAgents[]>('agents');
 
   return {
     props: {
