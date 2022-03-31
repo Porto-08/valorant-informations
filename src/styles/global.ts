@@ -17,7 +17,7 @@ export default createGlobalStyle`
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: ${props => props.theme.colors.primary};
+      background-color: ${({ theme }) => theme.colors.primary};
     }
 
   }
@@ -26,8 +26,8 @@ export default createGlobalStyle`
     width: 100vw;
     height: 100vh;
     
-    background: ${props => props.theme.colors.background};
-    color: ${props => props.theme.colors.text};
+    background: ${({ theme }) => theme.colors.background};
+    color: ${({ theme }) => theme.colors.text};
     font: 400 16px "Poppins", sans-serif;
   }
 `
