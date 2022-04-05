@@ -62,7 +62,7 @@ const Weapon = ({ weapon }: Props) => {
                     <h2>Dano</h2>
 
                     <div className='weapon-damage'>
-                        {weapon.weaponStats.damageRanges.map((damage, index) => (
+                        {weapon.weaponStats && weapon.weaponStats.damageRanges.map((damage, index) => (
                             <div key={index}>
                                 <h3>{`${damage.rangeStartMeters} - ${damage.rangeEndMeters} (Metros)`}</h3>
                                 <ul>
@@ -80,8 +80,8 @@ const Weapon = ({ weapon }: Props) => {
 
                     <div className='weapon-price'>
                         <ul>
-                            <li>Preço: {weapon.shopData.cost}</li>
-                            <li>Categoria: {weapon.shopData.category}</li>
+                            <li>Preço: {weapon.shopData && weapon.shopData.cost}</li>
+                            <li>Categoria: {weapon.shopData && weapon.shopData.category}</li>
                         </ul>
                     </div>
                 </WeaponContentSection>
@@ -91,9 +91,9 @@ const Weapon = ({ weapon }: Props) => {
 
                     <div className='weapon-stats'>
                         <ul>
-                            <li>Taxa de tiros: {weapon.weaponStats.fireRate.toFixed(1)} </li>
-                            <li>Balas: {weapon.weaponStats.magazineSize}</li>
-                            <li>Segundos para recarga: {weapon.weaponStats.reloadTimeSeconds.toFixed(1)} </li>
+                            <li>Taxa de tiros: {weapon.weaponStats && weapon.weaponStats.fireRate.toFixed(1)} </li>
+                            <li>Balas: {weapon.weaponStats && weapon.weaponStats.magazineSize}</li>
+                            <li>Segundos para recarga: {weapon.weaponStats && weapon.weaponStats.reloadTimeSeconds.toFixed(1)} </li>
                         </ul>
                     </div>
                 </WeaponContentSection>
