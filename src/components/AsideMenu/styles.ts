@@ -17,7 +17,7 @@ export const Container = styled.aside`
     right: 0;
     z-index: 1;
 
-    background-color: ${props => props.theme.colors.background};
+    background-color: ${props => props.theme.colors.secondaryBackground};
 
     animation: ${fadeInRight} 0.5s ease;
     

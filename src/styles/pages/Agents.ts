@@ -8,7 +8,7 @@ export const Container = styled.div`
     gap: 20px;
     padding: 20px;
 
-    background: ${props => props.theme.colors.text};
+    background: ${props => props.theme.colors.background};
 
     animation: ${fadeIn} .7s ease;
 

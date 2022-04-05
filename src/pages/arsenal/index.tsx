@@ -15,10 +15,9 @@ interface Props {
 }
 
 const Arsenal = ({ arsenal }: Props) => {
-    console.log(arsenal)
     return (
         <Container>
-            <Intro title='Arsenal' subtitle='Look all this weapons! Which one is the best?' />
+            <Intro title='Arsenal' subtitle='Só não vale a Odin em!' />
 
             <GridArsenal>
                 {arsenal && arsenal.data.map((weapon) => (
@@ -30,7 +29,7 @@ const Arsenal = ({ arsenal }: Props) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-    const { data } = await api.get<Weapons[]>('weapons');
+    const { data } = await api.get<Weapons[]>('weapons?language=pt-BR');
 
     return {
         props: {

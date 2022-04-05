@@ -20,12 +20,12 @@ const Agents = ({ agents }: Props) => {
 
   return (
     <Container>
-      <Intro title='Agents' subtitle='Choose what suits you best'/>
+      <Intro title='Agentes' subtitle='Qual combina mais com você?'/>
 
       <GridAgents>
         {agents && agents.data.map((agent) => (
           agent.isPlayableCharacter && (
-            <Card key={agent.uuid} buttonTitle='Choose this' description={agent.description} image={agent.fullPortraitV2} title={agent.displayName} onClick={() => {
+            <Card key={agent.uuid} buttonTitle='Conhecer Agente' description={agent.description} image={agent.fullPortraitV2} title={agent.displayName} onClick={() => {
               router.push(`/agent/${agent.uuid}`)
             }}/>
           )
@@ -36,7 +36,7 @@ const Agents = ({ agents }: Props) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await api.get<IAgents[]>('agents');
+  const { data } = await api.get<IAgents[]>('agents?language=pt-BR');
 
   return {
     props: {

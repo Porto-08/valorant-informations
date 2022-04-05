@@ -20,11 +20,11 @@ const Agents = ({ maps }: Props) => {
 
   return (
     <Container>
-      <Intro title='Maps' subtitle='Look this maps! Which one is the best for you?'/>
+      <Intro title='Mapas' subtitle='Mapas de vários tipos. Qual o seu?'/>
 
       <GridMaps>
         {maps && maps.data.map((map) => (
-          <Card key={map.uuid} buttonTitle='For sure This' title={map.displayName} image={map.splash} description="Without description :/"/>
+          <Card key={map.uuid} title={map.displayName} image={map.splash}/>
         ))}
       </GridMaps>
     </Container>
@@ -32,7 +32,7 @@ const Agents = ({ maps }: Props) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await api.get<Map[]>('maps');
+  const { data } = await api.get<Map[]>('maps?language=pt-BR');
   
   return {
     props: {

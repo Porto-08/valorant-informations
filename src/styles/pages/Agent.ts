@@ -25,9 +25,7 @@ export const HeaderAgent = styled.section`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 10px;
-
-        
+        gap: 10px;  
     }
 
     img {
@@ -43,7 +41,7 @@ export const HeaderAgent = styled.section`
 
     h1 {
         font-size: clamp(2.5rem, 5vw, 3rem);
-        color: ${props => props.theme.colors.text};
+        color: ${props => props.theme.colors.white};
 
         animation: ${fadeIn} .7s ease;
     }
@@ -51,6 +49,7 @@ export const HeaderAgent = styled.section`
     p {
         font-size: clamp(1rem, 2vw, 1rem);
         animation: ${fadeIn} .7s ease;
+        color: ${props => props.theme.colors.white};
     }
 
     @media(max-width: 768px) {
@@ -88,7 +87,7 @@ export const DescriptionAgent = styled.section`
 
     p {
         font-size: clamp(1rem, 2vw, 1rem);
-        color: ${props => props.theme.colors.text};
+        color: ${props => props.theme.colors.white};
         letter-spacing: .5px;
         animation: ${fadeIn} .7s ease both .6s;
     }
@@ -129,7 +128,7 @@ export const SkillsAgent = styled.section`
 
     p {
         font-size: clamp(1rem, 2vw, 1rem);
-        color: ${props => props.theme.colors.text};
+        color: ${props => props.theme.colors.white};
         letter-spacing: .5px;
         animation: ${fadeIn} .7s ease both 1.8s;
     }
@@ -160,7 +159,7 @@ export const Skill = styled.div`
 
         h4 {
             font-size: clamp(1rem, 2vw, 1.15rem);
-            color: ${props => props.theme.colors.text};
+            color: ${props => props.theme.colors.primary};
         }
 
         img {

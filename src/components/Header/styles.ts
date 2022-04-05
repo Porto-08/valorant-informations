@@ -6,7 +6,7 @@ export const Container = styled.header`
   align-items: center;
   justify-content: space-between;
 
-  background: ${props => props.theme.colors.background};
+  background: ${props => props.theme.colors.secondaryBackground};
 
   width: 100vw;
   padding: 30px 20px;
@@ -44,7 +44,7 @@ export const NavBar = styled.nav`
   a {
     text-decoration: none;
     letter-spacing: 1.5px;
-    color: ${props => props.theme.colors.text};
+    color: ${props => props.theme.colors.white};
     font-size: clamp(1rem, 1.15vw, 1.25rem);
 
     &:hover {
@@ -75,7 +75,7 @@ export const Hamburger = styled.button`
   border: none;
   cursor: pointer;
   
-  color: ${props => props.theme.colors.text};
+  color: ${props => props.theme.colors.white};
 
   &:hover {
     color: ${props => props.theme.colors.primary};

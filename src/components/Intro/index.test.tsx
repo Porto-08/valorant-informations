@@ -1,5 +1,5 @@
-import { screen } from "../../../test"
-import { renderTheme } from "test/renderTheme";
+import { screen } from "../../test"
+import { renderTheme } from "src/test/renderTheme";
 import Intro from "./index"
 import { Props } from "./interface";
 

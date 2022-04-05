@@ -26,7 +26,7 @@ export default createGlobalStyle`
     width: 100vw;
     height: 100vh;
     
-    background: ${({ theme }) => theme.colors.background};
+    background: ${({ theme }) => theme.colors.secondaryBackground};
     color: ${({ theme }) => theme.colors.text};
     font: 400 16px "Poppins", sans-serif;
   }

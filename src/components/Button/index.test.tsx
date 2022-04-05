@@ -1,5 +1,5 @@
-import { screen, fireEvent } from "../../../test"
-import { renderTheme } from "test/renderTheme";
+import { screen, fireEvent } from "../../test"
+import { renderTheme } from "src/test/renderTheme";
 import Button from "./index";
 
 

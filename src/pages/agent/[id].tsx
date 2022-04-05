@@ -21,24 +21,24 @@ const Agent = ({ agent }: Props) => {
         <Container>
             <HeaderAgent>
                 <div>
-                    <h1>{agent.displayName ? agent.displayName : "Agent Name"}</h1>
+                    <h1>{agent.displayName ? agent.displayName : "Nome do Agente"}</h1>
                     <p>{agent.role.displayName}</p>
                 </div>
 
 
-                <img src={agent.fullPortraitV2} alt={agent.displayName ? agent.displayName : "Agent Name"} />
+                <img src={agent.fullPortraitV2} alt={agent.displayName ? agent.displayName : "Nome do Agente"} />
             </HeaderAgent>
 
             <DescriptionAgent>
                 <div>
-                    <h3>Description</h3>
+                    <h3>Descrição</h3>
                     <p>
                         {agent.description}
                     </p>
                 </div>
 
                 <div>
-                    <h3>Game Style</h3>
+                    <h3>Estilo de jogo</h3>
                     <p>
                         {agent.role.description}
                     </p>
@@ -87,7 +87,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (context) => {
     const { id } = context.params as IParams;
 
-    const { data } = await api.get<IAgent>(`/agents/${id}`);
+    const { data } = await api.get<IAgent>(`/agents/${id}?language=pt-BR`);
 
     return {
         props: {

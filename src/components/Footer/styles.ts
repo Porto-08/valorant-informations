@@ -7,11 +7,12 @@ export const Container = styled.footer`
     justify-content: center;
     align-items: center;
 
-    background-color: ${props => props.theme.colors.background};
+    background-color: ${props => props.theme.colors.secondaryBackground};
     padding: 20px;
 
     p {
         font-size: clamp(.8rem, 1.15vw, 1.25rem);
+        color: ${props => props.theme.colors.white};
     }
 
     a {
@@ -19,7 +20,7 @@ export const Container = styled.footer`
         text-decoration: none;
 
         &:hover {
-            color: ${props => props.theme.colors.text};
+            color: ${props => props.theme.colors.secondary};
             text-decoration: underline;
         }
     }

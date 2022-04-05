@@ -1,7 +1,9 @@
 export const light = {
   colors: {
-    background: '#101822',
-    text: '#fff',
+    background: '#F7F7F7',
+    secondaryBackground: '#101822',
+    white: '#F7F7F7',
+    text: '#101822',
     primary: '#FF4654',
     secondary: '#FF8189',
     tertiary: '#18212A'
@@ -10,11 +12,13 @@ export const light = {
 
 export const dark = {
   colors: {
-    background: '#101822',
-    text: '#fff',
+    background: '#18212A',
+    secondaryBackground: '#101822',
+    white: '#F7F7F7',
+    text: '#F7F7F7',
     primary: '#FF4654',
     secondary: '#FF8189',
-    tertiary: '#18212A'
+    tertiary: '#F7F7F7'
   }
 }
 

@@ -12,16 +12,17 @@ export const Container = styled.div`
     border-radius: 30px;
     padding: 1rem 1.5rem;
 
-    min-height: 450px;
-    background-color: ${props => props.theme.colors.text};
+    min-height: 250px;
+    height: 100%;
+    background-color: ${props => props.theme.colors.background};
 
     animation: ${fadeIn} .7s ease both .7s;
+
 
     h3 {
       font-size: clamp(1.5rem, 2vw, 1.25rem);
       color: ${props => props.theme.colors.tertiary};
-      letter-spacing: 1.5px;
-
+      letter-spacing: 1.5px
     }
 
     p {
@@ -39,4 +40,13 @@ export const Container = styled.div`
       white-space: normal;
     }
 
+    img {
+      min-height: 150px;
+      max-height: 250px;
+      object-fit: contain;
+    }
+
+    button {
+      margin-top: 5px;
+    }
 `;

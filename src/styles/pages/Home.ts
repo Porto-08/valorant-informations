@@ -34,13 +34,13 @@ export const BackgroundImage = styled.div`
   
   p {
     font-size: clamp(1rem, 1.5vw, 1.25rem);
-    color: ${props => props.theme.colors.text};
+    color: ${props => props.theme.colors.white};
     animation: ${fadeIn} .7s ease both .3s;
   }
   
   h1 {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
-    color: ${props => props.theme.colors.text};
+    color: ${props => props.theme.colors.white};
     text-transform: uppercase;
     letter-spacing: 1.5px;
     animation: ${fadeIn} .7s ease both .5s;
@@ -59,32 +59,10 @@ export const GridAbout = styled.section`
     display: grid;
     gap: 20px;
     padding: 30px;
-    background: ${props => props.theme.colors.text};
-
-    h2 {
-      text-align: center;
-      font-size: clamp(2rem, 3vw, 3rem);
-      color: ${props => props.theme.colors.background};
-
-      &::before {
-        content: "";
-        display: block;
-        width: 50px;
-        height: 5px;
-        background: ${props => props.theme.colors.primary};
-        margin: 0 auto;
-      }
-    }
-
-    p {
-      text-align: center;
-      font-size: clamp(.8rem, 1vw, 1rem);
-      color: ${props => props.theme.colors.background};
-    }
+    background: ${props => props.theme.colors.background};
 
     .grid {
       display: grid;
-      align-items: center;
       justify-content: space-evenly;
       grid-template-columns: repeat(auto-fit, minmax(25rem, 500px));
       gap: 2.5rem;

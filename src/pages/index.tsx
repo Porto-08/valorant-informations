@@ -46,7 +46,7 @@ const Home: React.FC = () => {
           <Card
             image='https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/splash.png'
             title='Maps'
-            description='Six maps to play with your friends. Each map has a unique style and a unique story.'
+            description='Seis mapas aleatórios para você jogar. Cada um com sua peculiaridade.'
             buttonTitle='See maps'
             onClick={() => {
               router.push('/maps')
@@ -54,9 +54,9 @@ const Home: React.FC = () => {
           />
 
           <Card
-            image='https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/splash.png'
-            title='Agents'
-            description='Find more ways to plant the Spike and style on your enemies with scrappers, strategists, and hunters of every description. '
+            image='https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/fullportraitv2.png'
+            title='Agentes'
+            description='Encontre mais maneiras de plantar o Spike e estilizar seus inimigos com duelistas, controladores, sentinelas e iniciadores de diversos tipos.'
             buttonTitle='Check the HeadCount'
             onClick={() => {
               router.push('/agents')
@@ -64,10 +64,10 @@ const Home: React.FC = () => {
           />
 
           <Card
-            image='https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/splash.png'
+            image='https://media.valorant-api.com/weaponskinchromas/9667983e-4c8c-e5b2-68d7-be84f9b3d46c/displayicon.png'
             title='Arsenal'
-            description='Choose yout weapon, customize it, and equip it to your team. We have Sidearms, Pistols, Shotguns, SMGS, Spiners, Heavies, Melee and Rifles for you to choose from.'
-            buttonTitle='See game modes'
+            description='Escolha sua arma e equipe-a para sua equipe. Temos Sidearms, Pistols, Shotguns, SMGS, Spiners, Heavies, Melee e Rifles para você escolher.'
+            buttonTitle='Arsenal'
             onClick={() => {
               router.push('/arsenal')
             }}
