@@ -30,4 +30,5 @@ export default createGlobalStyle`
     color: ${({ theme }) => theme.colors.text};
     font: 400 16px "Poppins", sans-serif;
   }
+  
 `
