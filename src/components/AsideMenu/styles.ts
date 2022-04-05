@@ -29,7 +29,7 @@ export const Container = styled.aside`
         font-size: clamp(1rem, 2vw, 1.25rem);
 
         &:hover {
-            color: ${props => props.theme.colors.text};
+            color: ${props => props.theme.colors.white};
             text-decoration: underline;
         }
     }
