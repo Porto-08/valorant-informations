@@ -1,3 +1,4 @@
+import { fadeIn } from './../animations';
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -18,14 +19,25 @@ export const WeaponHeader = styled.section`
 
   background-color: ${props => props.theme.colors.background};
 
+  img {
+    animation: ${fadeIn} .7s ease;
+  }
+
   h1 {
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: clamp(2.5rem, 3vw, 4rem);
     color: ${props => props.theme.colors.tertiary};
+    animation: ${fadeIn} .7s ease both .3s;
 
     &:hover {
       color: ${props => props.theme.colors.primary};
     }
   }
+
+  span {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+  }
+
+
 `;
 
 export const WeaponContent = styled.section`
@@ -34,8 +46,14 @@ export const WeaponContent = styled.section`
   padding: 20px;
 
   width: 100%;
-
   background-color: ${props => props.theme.colors.tertiary};
+
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
 `;
 
 export const WeaponContentSection = styled.article`
@@ -45,6 +63,7 @@ export const WeaponContentSection = styled.article`
   h2 {
     color: ${props => props.theme.colors.white};
     font-size: clamp(1.5rem, 2vw, 2.5rem);
+    animation: ${fadeIn} .7s ease both .6s;
   }
 
 
@@ -54,7 +73,8 @@ export const WeaponContentSection = styled.article`
 
     h3 {
       color: ${props => props.theme.colors.primary};
-      font-size: clamp(1.25rem, 1.5vw, 2rem);
+      font-size: clamp(1rem, 1.25vw, 1.5rem);
+      animation: ${fadeIn} .7s ease both .9s;
     }
 
     ul {
@@ -64,6 +84,18 @@ export const WeaponContentSection = styled.article`
     li {
       color: ${props => props.theme.colors.white};
       font-size: clamp(1rem, 1vw, 1.5rem);
+      animation: ${fadeIn} .7s ease both 1.2s;
+    }
+  }
+
+  .weapon-damage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+      width: 100%;
+      justify-content: space-around;
     }
   }
 `;
@@ -80,11 +112,13 @@ export const WeaponSkins = styled.section`
     h2 {
       color: ${props => props.theme.colors.white};
       font-size: clamp(1.5rem, 2vw, 2.5rem);
+      animation: ${fadeIn} .7s ease both 1.5s;
     }
 
     span {
       color: ${props => props.theme.colors.white};
       font-size: clamp(1rem, 1vw, 1.5rem);
+      animation: ${fadeIn} .7s ease both 1.8s;
     }
   }
   

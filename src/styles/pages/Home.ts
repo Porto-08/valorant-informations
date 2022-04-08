@@ -60,14 +60,13 @@ export const GridAbout = styled.section`
     gap: 20px;
     padding: 30px;
     background: ${props => props.theme.colors.background};
-
+    
     .grid {
       display: grid;
       justify-content: space-evenly;
       grid-template-columns: repeat(auto-fit, minmax(25rem, 500px));
       gap: 2.5rem;
       
-
       @media (max-width: 1366px) {
         grid-template-columns: repeat(auto-fit, minmax(25rem, 300px));
         gap: 1rem;

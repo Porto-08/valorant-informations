@@ -49,4 +49,8 @@ export const Container = styled.div`
     button {
       margin-top: 5px;
     }
+
+    @media (max-width: 768px) {
+      min-height: auto;
+    }
 `;

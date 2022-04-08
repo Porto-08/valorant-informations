@@ -9,7 +9,7 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
     
-    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    font-size: clamp(1.75rem, 2.5vw, 3rem);
     font-style: italic;
     color: ${props => props.theme.colors.tertiary};
     text-align: center;
@@ -33,6 +33,9 @@ export const Subtitle = styled.span`
     font-style: italic;
     color: ${props => props.theme.colors.tertiary};
 
-    
     animation: ${fadeIn} .7s ease both .3s;
+
+    @media (max-width: 768px) {
+        text-align: center;
+    }
 `;

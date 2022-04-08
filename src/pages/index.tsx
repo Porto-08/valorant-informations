@@ -40,8 +40,6 @@ const Home: React.FC = () => {
       <GridAbout id='conheca-o-jogo'>
         <Intro title='Conheça o Jogo.' subtitle='Para mais informações acesse o menu a direita.'/>
 
-
-
         <div className='grid'>
           <Card
             image='https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/splash.png'
@@ -56,7 +54,7 @@ const Home: React.FC = () => {
           <Card
             image='https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/fullportraitv2.png'
             title='Agentes'
-            description='Encontre mais maneiras de plantar o Spike e estilizar seus inimigos com duelistas, controladores, sentinelas e iniciadores de diversos tipos.'
+            description='Encontre mais maneiras de plantar o Spike e derrotar seus inimigos com duelistas, controladores, sentinelas e iniciadores de diversos tipos.'
             buttonTitle='Check the HeadCount'
             onClick={() => {
               router.push('/agents')
