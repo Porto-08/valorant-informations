@@ -5,7 +5,7 @@ import { Container, GridBuddies } from '../../styles/pages/Buddies';
 import { api } from '../../service/api';
 import { IBuddies } from '../../interfaces/buddies';
 import Intro from '../../components/Intro';
-import { useRouter } from 'next/router';
+import Head from 'next/head';
 interface Props {
   bundies: IBuddies;
 }
@@ -14,6 +14,10 @@ const Buddies = ({ bundies }: Props) => {
   console.log(bundies);
   return (
     <Container>
+      <Head>
+        <title>Valorant Informations - Chaveiros</title>
+      </Head>
+      
       <Intro title='Chaveiros' subtitle='Pra deixar sua arma com sua cara!'/>
 
       <GridBuddies>

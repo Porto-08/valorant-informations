@@ -1,99 +1,107 @@
-import { GetStaticPaths, GetStaticProps } from 'next'
-import { ParsedUrlQuery } from 'querystring'
-import React from 'react'
-import { IAgents } from 'src/interfaces/agents/interface'
-import { Data, IAgent } from 'src/interfaces/agent'
-import { api } from 'src/service/api'
-import { Container, DescriptionAgent, HeaderAgent, Skill, Skills, SkillsAgent } from '../../styles/pages/Agent'
-
+import { GetStaticPaths, GetStaticProps } from "next";
+import { ParsedUrlQuery } from "querystring";
+import React from "react";
+import { IAgents } from "src/interfaces/agents/interface";
+import { Data, IAgent } from "src/interfaces/agent";
+import { api } from "src/service/api";
+import {
+  Container,
+  DescriptionAgent,
+  HeaderAgent,
+  Skill,
+  Skills,
+  SkillsAgent,
+} from "../../styles/pages/Agent";
+import Head from "next/head";
 
 interface IParams extends ParsedUrlQuery {
-    id: string;
+  id: string;
 }
 
 interface Props {
-    agent: Data;
+  agent: Data;
 }
 
 const Agent = ({ agent }: Props) => {
+  return (
+    <Container>
+      <Head>
+        <title>Valorant Informations - {agent.displayName}</title>
+      </Head>
 
-    return (
-        <Container>
-            <HeaderAgent>
-                <div>
-                    <h1>{agent.displayName ? agent.displayName : "Nome do Agente"}</h1>
-                    <p>{agent.role.displayName}</p>
-                </div>
+      <HeaderAgent>
+        <div>
+          <h1>{agent.displayName ? agent.displayName : "Nome do Agente"}</h1>
+          <p>{agent.role.displayName}</p>
+        </div>
 
+        <img
+          src={agent.fullPortraitV2}
+          alt={agent.displayName ? agent.displayName : "Nome do Agente"}
+        />
+      </HeaderAgent>
 
-                <img src={agent.fullPortraitV2} alt={agent.displayName ? agent.displayName : "Nome do Agente"} />
-            </HeaderAgent>
+      <DescriptionAgent>
+        <div>
+          <h3>Descrição</h3>
+          <p>{agent.description}</p>
+        </div>
 
-            <DescriptionAgent>
-                <div>
-                    <h3>Descrição</h3>
-                    <p>
-                        {agent.description}
-                    </p>
-                </div>
+        <div>
+          <h3>Estilo de jogo</h3>
+          <p>{agent.role.description}</p>
+        </div>
+      </DescriptionAgent>
 
-                <div>
-                    <h3>Estilo de jogo</h3>
-                    <p>
-                        {agent.role.description}
-                    </p>
-                </div>
-            </DescriptionAgent>
+      <SkillsAgent>
+        <h3>Skills</h3>
 
-            <SkillsAgent>
-                <h3>Skills</h3>
+        <Skills>
+          {agent.abilities.map((ability) => (
+            <Skill key={ability.displayName}>
+              <div>
+                <h4>{ability.displayName}</h4>
+                <img src={ability.displayIcon} alt={ability.displayName} />
+              </div>
 
-                <Skills>
-                    {agent.abilities.map((ability) => (
-                        <Skill key={ability.displayName}>
-                            <div>
-                                <h4>{ability.displayName}</h4>
-                                <img src={ability.displayIcon} alt={ability.displayName} />
-                            </div>
-
-                            <p>{ability.description}</p>
-                        </Skill>
-                    ))}
-                </Skills>
-            </SkillsAgent>
-        </Container>
-    )
-}
+              <p>{ability.description}</p>
+            </Skill>
+          ))}
+        </Skills>
+      </SkillsAgent>
+    </Container>
+  );
+};
 
 export const getStaticPaths: GetStaticPaths = async () => {
-    const { data } = await api.get<IAgents>('/agents');
+  const { data } = await api.get<IAgents>("/agents");
 
-    const agents = data.data.filter(agent => agent.isPlayableCharacter);
+  const agents = data.data.filter((agent) => agent.isPlayableCharacter);
 
-    const paths = agents.map((agent) => {
-        return {
-            params: { 
-                id: agent.uuid  
-            }
-        };
-    });
-
+  const paths = agents.map((agent) => {
     return {
-        paths,
-        fallback: "blocking"
-    }
-}
+      params: {
+        id: agent.uuid,
+      },
+    };
+  });
+
+  return {
+    paths,
+    fallback: "blocking",
+  };
+};
 
 export const getStaticProps: GetStaticProps = async (context) => {
-    const { id } = context.params as IParams;
+  const { id } = context.params as IParams;
 
-    const { data } = await api.get<IAgent>(`/agents/${id}?language=pt-BR`);
+  const { data } = await api.get<IAgent>(`/agents/${id}?language=pt-BR`);
 
-    return {
-        props: {
-            agent: data.data
-        }
-    }
-}
+  return {
+    props: {
+      agent: data.data,
+    },
+  };
+};
 
-export default Agent
+export default Agent;
