@@ -45,7 +45,7 @@ const Home: React.FC = () => {
             image='https://media.valorant-api.com/maps/7eaecc1b-4337-bbf6-6ab9-04b8f06b3319/splash.png'
             title='Maps'
             description='Seis mapas aleatórios para você jogar. Cada um com sua peculiaridade.'
-            buttonTitle='See maps'
+            buttonTitle='Conehcer mapas'
             onClick={() => {
               router.push('/maps')
             }}
@@ -55,7 +55,7 @@ const Home: React.FC = () => {
             image='https://media.valorant-api.com/agents/a3bfb853-43b2-7238-a4f1-ad90e9e46bcc/fullportraitv2.png'
             title='Agentes'
             description='Encontre mais maneiras de plantar o Spike e derrotar seus inimigos com duelistas, controladores, sentinelas e iniciadores de diversos tipos.'
-            buttonTitle='Check the HeadCount'
+            buttonTitle='Conhecer Agentes'
             onClick={() => {
               router.push('/agents')
             }}
@@ -65,7 +65,7 @@ const Home: React.FC = () => {
             image='https://media.valorant-api.com/weaponskinchromas/9667983e-4c8c-e5b2-68d7-be84f9b3d46c/displayicon.png'
             title='Arsenal'
             description='Escolha sua arma e equipe-a para sua equipe. Temos Sidearms, Pistols, Shotguns, SMGS, Spiners, Heavies, Melee e Rifles para você escolher.'
-            buttonTitle='Arsenal'
+            buttonTitle='Conhecer Arsenal'
             onClick={() => {
               router.push('/arsenal')
             }}

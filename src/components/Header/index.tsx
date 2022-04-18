@@ -24,9 +24,9 @@ const Header = () => {
       }} />
 
       <NavBar>
-        <Link href="/">Home</Link>
-        <Link href="/agents">Agents</Link>
-        <Link href="/maps">Maps</Link>
+        <Link href="/arsenal">Arsenal</Link>
+        <Link href="/agents">Agentes</Link>
+        <Link href="/maps">Mapas</Link>
       </NavBar>
 
       <Hamburger type='button' onClick={() => setIsOpen(!isOpen)}>

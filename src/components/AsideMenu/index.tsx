@@ -5,10 +5,12 @@ import { Container } from './styles'
 const AsideMenu = () => {
   return (
     <Container role='aside'>
-        <Link href="/agents">Agents</Link>
+        <Link href="/agents">Agentes</Link>
         <Link href="/arsenal">Arsenal</Link>
-        <Link href="/maps">Maps</Link>
-        {/* <Link href="/">Buddies</Link>
+        <Link href="/maps">Mapas</Link>
+        <Link href="/buddies">Chaveiros</Link>
+        
+        {/* 
         <Link href="/">Bundles</Link>
         <Link href="/">Cerimonies</Link>
         <Link href="/">Competitive Tiers</Link>
