@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         <Container>
             <p role='paragraph'>&copy; {new Date().getFullYear} Valorant Informations - All rights reserved</p>
 
-            <p role='paragraph'>Feito com <BsSuitHeartFill /> por <a href="https://portfolio-nine-rose-40.vercel.app/" target="_blank" rel='noreferrer'>Samuel Porto</a></p>
+            <p role='paragraph'>Feito com <BsSuitHeartFill /> por <a href="https://samuel-porto.vercel.app/" target="_blank" rel='noreferrer'>Samuel Porto</a></p>
 
             <span>
                 Powered by <Link href="https://valorant-api.com/">VALORANT-API</Link>

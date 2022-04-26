@@ -48,7 +48,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <link rel="icon" href="#" />
+          <link rel="icon" href="" />
         </Head>
         <body>
           <Main />
